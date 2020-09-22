@@ -24,7 +24,10 @@ let package = Package(
             resources: [
                 .process("SensorsAnalyticsSDK.bundle"),
             ],
-            publicHeadersPath: "Public"
+            publicHeadersPath: "Public",
+            cxxSettings: [
+                .define("SENSORS_ANALYTICS_DISABLE_UIWEBVIEW")
+            ]
         ),
     ]
 )
